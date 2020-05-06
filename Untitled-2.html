@@ -5,41 +5,10 @@
             thing
         </title>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js" integrity="sha256-Pg1di+fBF53Rbh9oZR/FeD1xsFzTLC963lcac1D0ias=" crossorigin="anonymous"></script>
+        <script src="dog.js"></script>
+        <script src="get_dog_imgs.js"></script>
     </head>
     <body>
-        <script>
-            let img1;
-            let ok;
-            async function getDogImg(){
-                const responce = await fetch('https://random.dog/woof.json')
-                const json = await responce.json()
-                if(checkURL(json.url)){
-                    img1 = loadImage(json.url)
-                    ok = true
-                }else{
-                    ok = false
-                }
-                
-                //return img1
-            }
-            function checkURL(url) {
-                return(url.match(/\.(jpeg|jpg|gif|png)$/) != null);
-            }
-            function setup(){
-                createCanvas(windowWidth,windowHeight)
-                getDogImg()
-                setInterval(() => {
-                    getDogImg()
-                },1000)
-            }
-            function draw(){
-                //translate(width/2,height/2)
-                imageMode(CENTER);
-                //background(225,0,0)
-                if(ok){
-                    image(img1,width/2,height/2,width,height)
-                }
-            }
-        </script>
+    <!-- no body -->
     </body>
 </html>
