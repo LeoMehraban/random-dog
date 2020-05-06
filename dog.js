@@ -1,3 +1,8 @@
+            let ok;
+            
+            let img1;
+            // this is whare the img will be stored. see get_dog_imgs.js for how it works
+                                                                                                                                    
             function checkURL(url) {
                 return(url.match(/\.(jpeg|jpg|gif|png)$/) != null);
             }
