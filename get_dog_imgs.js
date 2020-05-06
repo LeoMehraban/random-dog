@@ -2,17 +2,17 @@
             let img2;
             let imgs;
             async function getDogImg(){
-                const responce = await fetch('https://random.dog/woof.json')
-                const json = await responce.json()
+//                 const responce = await fetch('https://random.dog/woof.json')
+//                 const json = await responce.json()
                 const responce1 = await fetch('https://dog.ceo/api/breeds/image/random')
                 const json1 = await responce1.json()
                 console.log("i got the img!!!!!!!!!");
-                if(checkURL(json.url)){
-                    imgs.push(loadImage(json.url));
-                    ok = true
-                }else{
-                    ok = false
-                }
+//                 if(checkURL(json.url)){
+//                     imgs.push(loadImage(json.url));
+//                     ok = true
+//                 }else{
+//                     ok = false
+//                 }
                 if(checkURL(json1.url)){
                     imgs.push(loadImage(json1.url));
                     ok = true
