@@ -23,7 +23,7 @@
                     image(img1,width/2,height/2,width,height)
                 }
             }
-            function setfullscreen(){
+            function setFullScreen(){
                    fullscreen();
             }
 
