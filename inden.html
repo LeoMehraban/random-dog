@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>by breed</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js" integrity="sha256-Pg1di+fBF53Rbh9oZR/FeD1xsFzTLC963lcac1D0ias=" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <input type="text" id="breed" value="type breed">
+        <button id="submit">submit</button>
+        <script>
+            let ok;
+            let breed;
+            let img1;
+            async function getDogImgByBreed(breed){
+                const responce = await fetch('https://dog.ceo/api/breed/'+breed+'/images/random')
+                const json = await responce.json()
+                console.log("i got the img!!!!!!!!!");
+                if(checkURL(json.message)){
+                    img1 = loadImage(json.message);
+                    ok = true
+                }else{
+                    ok = false
+                }
+            }
+            
+            // this is whare the img will be stored. see get_dog_imgs.js for how it works
+                                                                                                                                    
+            function checkURL(url) {
+                return(url.match(/\.(jpeg|jpg|gif|png)$/) != null);
+            }
+            function setup(){
+                createCanvas(windowWidth,windowHeight)
+                if(breed){
+                    getDogImgByBreed(breed)
+                    setInterval(() => {
+                    getDogImgByBreed(breed)
+                },1000)
+                }
+            }
+            function draw(){
+                //translate(width/2,height/2)
+                imageMode(CENTER);
+
+                //background(225,0,0)
+                if(ok){
+                    image(img1,width/2,height/2,width,height)
+                }
+            }
+            function getValueOfText(){
+                breed = document.getElementById('breed').value;
+            }
+
+
+        </script>
+    </body>
+</html>
