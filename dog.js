@@ -14,6 +14,8 @@
                 },1000)
             }
             function draw(){
+                 height = windowHeight
+                 width = windowWidth
                 //translate(width/2,height/2)
                 imageMode(CENTER);
                 //background(225,0,0)
