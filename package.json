@@ -4,7 +4,7 @@
   "description": "a web app that will generate a random dog pic every few seconds. if you see issues, please tell me.  [this is whare you can see it in action](https://leomehraban.github.io/random-dog/)",
   "main": "dog.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "electron ."
   },
   "repository": {
     "type": "git",
