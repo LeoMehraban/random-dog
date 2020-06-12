@@ -1,0 +1,24 @@
+{
+  "name": "random-dog",
+  "version": "1.0.0",
+  "description": "a web app that will generate a random dog pic every few seconds. if you see issues, please tell me.  [this is whare you can see it in action](https://leomehraban.github.io/random-dog/)",
+  "main": "dog.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeoMehraban/random-dog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LeoMehraban/random-dog/issues"
+  },
+  "homepage": "https://github.com/LeoMehraban/random-dog#readme",
+  "dependencies": {
+    "electron": "^9.0.3",
+    "index.js": "0.0.3"
+  }
+}
