@@ -1,16 +1,7 @@
 const electron = require('electron');
-const url = require('url');
-const path = require('path');
 const {app,BrowserWindow} = electron;
-const mainWindow;
-app.on('ready',() => {
-    mainWindow = new BrowserWindow({});
-    mainWindow.loadURL(url.format({
-        pathname: path.join(__dirname,'index.html'),
-        protocol: 'file:',
-        slashes: true
-    }));
-    mainWindow.on('close', () => {
-        app.quit()
-    });
+let win;
+app.on('ready', () => {
+   win = new BrowserWindow({});
+   win.loadUrl(`file://${__dirname}/index.html`);
 });
