@@ -8,5 +8,11 @@ NOTE: you need to install [git](https://git-scm.com) and [node.js](https://nodej
 1. git clone https://github.com/LeoMehraban/random-dog.git
 2. cd random-dog
 3. npm install
-4. npm start
+4. npm start.
+
+
+
+
+
+
 and you have your desktop application!!!!!
