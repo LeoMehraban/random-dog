@@ -16,3 +16,7 @@ NOTE: you need to install [git](https://git-scm.com) and [node.js](https://nodej
 
 
 and you have your desktop application!!!!!
+
+but if you want this as a desktop app, then download [DogApp](https://leomehraban.github.io/DogApp-Website). it has more fetures then this
+
+
